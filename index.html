@@ -1,382 +1,487 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>An analysis of the corn price in southern Brazil considering external factors</title>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<title>Unique</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css"> 
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css"> 
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+ 
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+ 
+</head>
+<body>
 
-       
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+	  <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	    <div id="main-nav" class="collapse navbar-collapse navStyle">
+			<ul class="nav navbar-nav" id="mainNav">
+			  <li class="active"><a href="#hero_section" class="scroll-link">Home</a></li>
+			  <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
+			  <li><a href="#service" class="scroll-link">Services</a></li>
+			  <li><a href="#Portfolio" class="scroll-link">Portfolio</a></li>
+			  <li><a href="#clients" class="scroll-link">Clients</a></li>
+			  <li><a href="#team" class="scroll-link">Team</a></li>
+			  <li><a href="#contact" class="scroll-link">Contact</a></li>
+			</ul>
+      </div>
+	 </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
 
-    </head>
-    <body>
-        <div id="wrapper">
-            <div class="container">
-                <div class="row">
-                    <div id="header">
-                        <div class="center">
-                            <h5>
-                                </br>
-                               
-                            <b>ICMC USP São Carlos</b>
-                            </br>
-                            Professor: <b>Afonso Paiva </b>
-                            </br>
-                            Course: <b>Visualização de Informação - MAI5017</b>
-                            </br>
-                            Students: <b>Matheus Diniz Ferreira</b> (NUSP:<b>11933342</b>) and <b>Luiz Gustavo Ribeiro</b> (NUSP:<b>5967710</b>)
-                            </br>
-                            August-2022
-                            </h5>
-                            </br>
-                            </br>
-                        </div>
-                        <h1>
-                            An analysis of the corn price in southern Brazil considering external factors
-                        </h1>
-                    </div>
-                    <div id="menu">
-                    </div>
-                    <div id="content">
-                    </div>
-                    <div class="post">
-                        </br>
-                        <h2>Problem Domain</h2>
-                        <h5>
-                            <b>Behavioural economics</b>, as the psychology behind economic activities(2),
-                            is founded upon the basis of choice(3).
-                            <b>Spatial behavior</b>, as a our problem domain, is defined from the 
-                            perspective of
-                            aversiveness and indifference to proximity(4), eg. if opportunities within a
-                            constrained <b>spatial range</b> are evaluated
-                            only in terms of attraction attributes, then the individual’s
-                            <b>spatial choices</b> may be <b>spatially indifferent</b>(4).
-                            </br>
-                            </br>
-                            However, there exists a <b>variety-seeking tendency</b>, that is an intrinsic
-                            tendency to engage a variation in
-                            behavior as a goal in and of itself, such variations are known as
-                            <b>variety-seeking behavior</b>(5).
-                            And yet, <b>spatial indifference</b> is bounded by constraints of willingness
-                            to traverse space over a certain <b>spatial range</b> to a set of opportunities
-                            that are <b>spatially finite</b>.
-                        </h5>
-                        </br>
-                        <h2>Philosophy, Motive, Approach & Hypothesis</h2>
-                        <h5>
-                            Our choice of a <b>philosophy</b> is that: <i>"the intuitive grasp of the 
-                                essentials of
-                                a large complex of facts leads to a basic 'law', from which, as a system
-                                of axioms, we may derive conclusions"</i>(7). 
-                            And as such, even that our chosen domain is foreign to us,  
-                            we understand that the key to traverse 
-                            its complex to 
-                            the clarity of the simple, is studying 
-                            its ubiquitous language's(8) most essential of constructs, and that is 
-                            the notion of behavior.
-                            On key <b>motive</b>, and with a software engineering background; 
-                            we address 
-                            an actor class of our 
-                            problem domain with a software artifact, 
-                            to <b>approach</b> our designated notion. 
-                            </br>
-                            </br>
-                            We set our <b>hypothesis</b> as that the economic actor class of spatial 
-                            choice variety 
-                            seekers would  
-                            be better served with a more tailored InfoVis utility other than the popularly 
-                            used 
-                            Google Maps<link>. 
-                        </h5>
-                        </br>
-                        <h2>Project Description</h2>
-                        <h5>
-                            We introduce twalk, an InfoVis utility,
-                            intended to serve <b>spatial choice variety seekers</b> in
-                            visualizing their <b>spatially finite</b> opportunities from
-                            within a specified <b>spatial range</b> defined in terms of
-                            origin/destination walking duration.
-                        </h5>
-                        </br>
-                   
-                        <h2>
-                            Data Acquisition
-                        </h2>
-                        <h5>
-                            While data acquisition is out of our scope, we needed
-                            demo data to demonstrate our project.
-                            Our demo data is sampled from <b>Google's
-                                Places</b> and <b>MatrixDistance API Endpoints</b>.
-                            For simplicity, we maintain a wide schema,
-                            until we reach the visualization stage.
-                           
-                        </h5>
-                            </br>
-                        <h2>
-                            Cardinal Direction Ranking
-                        </h2>
-                        <h5>
-                            First, we used our origin/destinations data to calculate to which
-                            cardinal direction each destination belongs.
-                            We used R's GeoSphere
-                            <i>bearingRhumb()</i> function.
-                            And we relaxed the cardinal accuracy of the destinations to provide a useful
-                            abstraction of a walking direction choice.
-                            </br>
-                           
-                            We calculate our descriptive statistics of each cardinal e.g.
-                            standard deviations, means, and coefficient of variations; as for each
-                            cardinal direction we may represent walking duration <b>spread</b> 
-                            via the coefficient of variations,
-                            <b>spatial proximity</b> via the mean and 
-                            <b>spatial variety</b> via the destination count.
-                            </br>
-                            </br>
-                            However, we choose to scope our current work only to the use of destination 
-                            counts
-                            within a specified spatial range at each direction, 
-                            as a guiding score
-                            for spatial variety. 
-                            </br>
-                            </br>
-                            
-                        </h5>
-                        </br>
-                        <h2>
-                            Information Visualization
-                        </h2>
-                        <h5>
-                            Data is insufficient for meaningful communication
-                            while information, as data transformed and interpreted within context is.
-                            And while <b>Visualization</b> is a <b>cognitive activity</b>, facilitated by
-                            external stimuli from which we build internal mental representations
-                            of the world (1);
-                            <b>Information Visualization</b> is the process that provides a capability,
-                            for transforming data into information(1).
-                            </br>
-                            </br>
-                            We note that the more specific the question we are asking,
-                            the more specific and clear the
-                            visual result will be(6). And as such our single-purpose utility employs
-                            minimal visual constructs to deliver its intended answer to the question:
-                            </br>
-                            </br>
-                            <b>Which walking direction(s) would offer more opportunities for a
-                                spatial choice
-                                variety seeker?</b>
-                            </br>
-                            </br>
-                            And to answer,
-                            our process of transforming data into information
-                            included the feature use of <b>spatial orientation</b>,
-                            <b>color</b>, <b>size</b>, and <b>user interaction</b>:
-                            </br>
-                            1. We provided our users with a spatial orientation via the use of a map.
-                            </br>
-                            2. We offered a map's legend to color associate a spatial direction with
-                            destination counts.
-                            </br>
-                            3. We represented walk duration proximity via size, the bigger the radius
-                            of a destination circle, the closer it is to origin.
-                            </br>
-                            4. And finally, we offered information on-demand via user's interaction e.g. popup interaction.
-                            </br>
-                            </br>
-                          
-                        </h5>
-                            </br>
-                            <!--
-                        <h2>Evaluation</h2>
-                        <h5>
-                            Stage #1: Data Acquisition
-                            </br>
-                            </br>
-                            Stage #2: Cardinal Direction Ranking 
-                            </br>
-                            </br>
-                            Stage #3: Information Visualization 
+<!--Hero_Section-->
+<section id="hero_section" class="top_cont_outer">
+  <div class="hero_wrapper">
+    <div class="container">
+      <div class="hero_section">
+        <div class="row">
+          <div class="col-lg-5 col-sm-7">
+            <div class="top_left_cont zoomIn wow animated"> 
+              <h2>We are the <strong>Leaders</strong> in IT Industry</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+              <a href="#service" class="read_more2">Read more</a> </div>
+          </div>
+          <div>
+			<img src="img/mainImg.png" class="bannerImg zoomIn wow animated" alt="" />
+		  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Hero_Section--> 
 
-                            </br>
-                            </br>
-                            Demo commentary
-                        </h5>
-                            </br>
-                            -->
-                        <h2>Conclusion</h2>
-                        <h5>
-                            Spatial indifference is bounded by constraints of willingness to traverse
-                            space over a certain range, and regardless of variety-seeking behavior,
-                            the set of opportunities considered by an individual when making a
-                            spatial choice are spatially finite. We employed cardinal directions and
-                            destination counts to offer, through spatial visual constructs of color and
-                            size, each walking direction opportunities.
+<section id="aboutUs"><!--Aboutus-->
+<div class="inner_wrapper">
+  <div class="container">
+    <h2>About Us</h2>
+    <div class="inner_section">
+	<div class="row">
+      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="img/about-img.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""></div>
+      	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
+        	<div class=" delay-01s animated fadeInDown wow animated">
+			<h3>Lorem Ipsum has been the industry's standard dummy text ever..</h3><br/> 
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.PageMaker including versions of Lorem Ipsum.</p> <br/>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+<div class="work_bottom"> <span>Want to know more..</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
+	   </div>
+      	
+      </div>
+	  
+      
+    </div>
+  </div> 
+  </div>
+</section>
+<!--Aboutus--> 
 
-                           
-                                And as we are spatial choice variety seekers ourselves, we find that our 
-                                utility yeilds, 
-                                more than Google Maps, 
-                                a visually instant
-                                answer to the question: 
-                                <i>Which walking direction(s) would offer more opportunities for 
-                                    a spatial choice variety seeker?</i>
-                                and hence we accept our hypothesis.
-                                <b>
-                                    In aggregate,
-                                    Information Visualization offers
-                                    a much needed aid, and our introduced utility presents useful 
-                                    visualization of
-                                    the spatially finite opportunities for its intended audience.
-                                </b>
-                        </h5>
-<!--
-                        <h2>Future Work</h2>
-                        <h5>
-                            During our project we experimented with the idea of having a cardinal
-                            ranking based on a function of: walking duration spread via the coefficient 
-                            of 
-                            variations, spatial proximity via the mean and spatial variety via the 
-                            destination count. 
-                            </br>
-                            We also realized that our ranking may be suitable for comparing several
-                            origins and their respective cardinal directions, which could
-                            lead to interesting applications. Nevertheless, we deemed it out
-                            of our current scope.
-                            An idea that we couldn't conclude due to our project's time constrain.
-                            And yet we are remain interested in its possible applications in 
-                            various domains e.g. real estate.
-                            Therefore we would like to pursue by intiating relevant litreature reviews
-                            in the areas of geostatistics,
-                            spatial analysis, and  
-                            spatial economics.
-                        </h5>
--->
-</br>
-<h2>Acknowledgment</h2>
-                        <h5>
-                            We are very grateful to
-                            <b>Osafu Augustine Egbon</b> (NUSP: <b>11494792</b>),
-                            an ICMC Statistics PostGrad, for his
-                            enthusiasm and diligence in fulfilling our various statistical inquiries.
-                        </h5>
-                        </br>
-                        <h2>Resources</h2>
-                        <h5>
-                            1. <a href="
-                            https://developers.google.com/places/web-service/overview
-                            ">
-                                Places API,
-                            </a>
-                            </br>
-                            2. <a href="
-                            https://developers.google.com/maps/documentation/distance-matrix/start
-                            ">
-                                Distance Matrix API
-                            </a>
-                            </br>
-                            3. <a href="
-                            https://www.r-project.org/about.html
-                            ">
-                                R
-                            </a>
-                            </br>
-                            4. <a href="
-                            https://cran.r-project.org/web/packages/geosphere/index.html
-                            ">
-                                GeoSphere
-                            </a>
-                            </br>
-                            5. <a href="
-                            https://man.openbsd.org/make
-                            ">
-                                Make
-                            </a>
-                            </br>
-                            </br>
-                            Please refer to our 
-                            <a href="https://github.com/projectsanca/projectsanca.github.io/tree/master/src">
-                        github page
-                        </a>
-                        for complete sourcecode and collected demo data. 
-                        </h5>
-                        </br>
-                        <h2>References</h2>
-                        <h5>
-                            <b>
-                                (1)
-                                "Introduction to Information Visualization",
-                                Riccardo Mazza,
-                                Springer,
-                                2009
-                                </br>
-                            </b>
-                            <b>
-                                (2)
-                                <b>"Theory of Games and Economic Behavior",
-                                    Oskar Morgenstern and John von Neumann,
-                                    Princeton University Press,
-                                    1944
-                                </b>
-                                </br>
-                            </b>
-                            <b>
-                                (3)
-                                <b>"Urban Dynamics and Spatial Choice Behaviour",
-                                    Joost Hauer, Harry Timmermans, and Neil Wrigley,
-                                    Kluwer Academic Publishers,
-                                    1989
-                                </b>
-                                </br>
-                            </b>
-                            <b>
-                                (4)
-                                <b>
-                                    "Spatial Choice Theory and Spatial Indifference: A Comment",
-                                    Frank Stetzer and Alan G. Phipps
-                                </b>
-                                </br>
-                            </b>
-                            <b>
-                                (5)
-                                <b>
-                                    "Variety-seeking in Product Choice Behavior",
-                                    Hans (J.C.M.) van Trijp,
-                                    Pudoc Scientific Publishers
-                                    1995
-                                </b>
-                                </br>
-                            </b>
-                            <b>
-                                (6)
-                                <b>
-                                    "Visualizing Data",
-                                    Ben Fry,
-                                    O'Reilly,
-                                    2008
-                                </b>
-                                </br>
-                            </b>
-                            <b>
-                                (7)
-                                <b>
-                                    "Building Theories: Heuristics and Hypotheses in Sciences",
-                                    David Danks and Emiliano Ippoliti,
-                                    Springer,
-                                    2018
-                                </b>
-                                </br>
-                            </b>
-                            <b>
-                                (8)
-                                <b>
-                                    "Domain-driven Design: Tackling Complexity in the Heart of Software",
-                                    Eric Evans,
-                                    Addison Wesley,
-                                    2003
-                                </b>
-                                </br>
-                            </b>
-                        </h5>
-                    </div>
-                    <!-- https://trac.ffmpeg.org/wiki/Concatenate -->
-                    <!--   <script src="js/main.js"></script> -->
-    </body>
+
+<!--Service-->
+<section  id="service">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="service_wrapper">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="service_block">
+            <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-android"></i></span> </div>
+            <h3 class="animated fadeInUp wow">Android</h3>
+            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 borderLeft">			
+          <div class="service_block">
+            <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-apple"></i></span> </div>
+            <h3 class="animated fadeInUp wow">Apple IOS</h3>
+            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 borderLeft">
+          <div class="service_block">
+            <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-html5"></i></span> </div>
+            <h3 class="animated fadeInUp wow">Design</h3>
+            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+          </div>
+        </div>
+      </div>
+	   </div>
+  </div>
+</section>
+<!--Service-->
+
+
+
+
+<!-- Portfolio -->
+<section id="Portfolio" class="content"> 
+  
+  <!-- Container -->
+  <div class="container portfolio_title"> 
+    
+    <!-- Title -->
+    <div class="section-title">
+      <h2>Portfolio</h2>
+    </div>
+    <!--/Title --> 
+    
+  </div>
+  <!-- Container -->
+  
+  <div class="portfolio-top"></div>
+  
+  <!-- Portfolio Filters -->
+  <div class="portfolio"> 
+    
+    <div id="filters" class="sixteen columns">
+      <ul class="clearfix">
+        <li><a id="all" href="#" data-filter="*" class="active">
+          <h5>All</h5>
+          </a></li>
+        <li><a class="" href="#" data-filter=".prototype">
+          <h5>Prototype</h5>
+          </a></li>
+        <li><a class="" href="#" data-filter=".design">
+          <h5>Design</h5>
+          </a></li>
+        <li><a class="" href="#" data-filter=".android">
+          <h5>Android</h5>
+          </a></li>
+        <li><a class="" href="#" data-filter=".appleIOS">
+          <h5>Apple IOS</h5>
+          </a></li>
+        <li><a class="" href="#" data-filter=".web">
+          <h5>Web App</h5>
+          </a></li>
+      </ul>
+    </div>
+    <!--/Portfolio Filters --> 
+    
+    <!-- Portfolio Wrapper -->
+    <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper"> 
+      
+      <!-- Portfolio Item -->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   appleIOS isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic1.jpg"  alt="Portfolio 1"> </div>        
+        <div class="item_overlay">
+          <div class="item_info"> 
+            <h4 class="project_name">SMS Mobile App</h4>
+          </div>
+        </div>
+        </div>
+      <!--/Portfolio Item --> 
+      
+      <!-- Portfolio Item-->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic2.jpg" alt="Portfolio 1"> </div>
+        <div class="item_overlay">
+          <div class="item_info"> 
+            <h4 class="project_name">Finance App</h4>
+          </div>
+        </div>
+      </div>
+      <!--/Portfolio Item --> 
+      
+      <!-- Portfolio Item -->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design  isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
+        <div class="item_overlay">
+          <div class="item_info"> 
+            <h4 class="project_name">GPS Concept</h4>
+          </div>
+        </div>
+      </div>
+      <!--/Portfolio Item--> 
+      
+      <!-- Portfolio Item-->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  android  prototype web isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic4.jpg" alt="Portfolio 1"> </div>
+        <div class="item_overlay">
+          <div class="item_info"> 
+            <h4 class="project_name">Shopping</h4>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio Item --> 
+      
+      <!-- Portfolio Item -->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic5.jpg" alt="Portfolio 1"> </div>
+        <div class="item_overlay">
+          <div class="item_info"> 
+            <h4 class="project_name">Managment</h4>
+          </div>
+        </div>
+      </div>
+      <!--/Portfolio Item --> 
+      
+      <!-- Portfolio Item -->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic6.jpg" alt="Portfolio 1"> </div>
+        <div class="item_overlay">
+          <div class="item_info"> 
+            <h4 class="project_name">iPhone</h4>
+          </div>
+        </div>
+      </div>
+      <!--/Portfolio Item --> 
+      
+      <!-- Portfolio Item  -->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design web isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic7.jpg" alt="Portfolio 1"> </div>       
+        <div class="item_overlay">
+          <div class="item_info"> 
+            <h4 class="project_name">Nexus Phone</h4>
+          </div>
+        </div>
+       </div>
+      <!--/Portfolio Item --> 
+      
+      <!-- Portfolio Item -->
+      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   android isotope-item">
+        <div class="portfolio_img"> <img src="img/portfolio_pic8.jpg" alt="Portfolio 1"> </div>       
+        <div class="item_overlay">
+          <div class="item_info"> 
+				<h4 class="project_name">Android</h4>
+          </div>
+        </div>
+        </a> </div>
+      <!--/Portfolio Item --> 
+      
+    </div>
+    <!--/Portfolio Wrapper --> 
+    
+  </div>
+  <!--/Portfolio Filters -->
+  
+  <div class="portfolio_btm"></div>
+  
+  
+  <div id="project_container">
+    <div class="clear"></div>
+    <div id="project_data"></div>
+  </div>
+ 
+  
+</section>
+<!--/Portfolio --> 
+
+<section class="page_section" id="clients"><!--page_section-->
+  <h2>Clients</h2>
+<!--page_section-->
+<div class="client_logos"><!--client_logos-->
+  <div class="container">
+    <ul class="fadeInRight animated wow">
+      <li><a href="javascript:void(0)"><img src="img/client_logo1.png" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="img/client_logo2.png" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="img/client_logo3.png" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="img/client_logo5.png" alt=""></a></li>
+    </ul>
+  </div>
+</div>
+</section>
+<!--client_logos-->
+
+<section class="page_section team" id="team"><!--main-section team-start-->
+  <div class="container">
+    <h2>Team</h2>
+    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing.</h6>
+
+<div class="member-area">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="member wow bounceInUp animated">
+								<div class="member-container" data-wow-delay=".1s">
+									<div class="inner-container">
+										<div class="author-avatar">									
+											<img class="img-circle" src="img/team_pic1.jpg" alt="Team Menber">
+										</div><!-- /.author-avatar -->
+
+										<div class="member-details">
+											<div class="member-top">									
+												<h4 class="name">
+													John Doe
+												</h4>
+												<span class="designation">
+													Manager
+												</span>
+											</div><!-- /.member-top -->
+
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.
+											</p>
+											<div class="member-social-link">
+												<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
+												<a href="#" class="facebook-btn"><i class="fa fa-facebook"></i></a>
+												<a href="#" class="dribbble-btn"><i class="fa fa-dribbble"></i></a>
+												<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
+											</div><!-- /.member-social-link -->
+										</div><!-- /.member-details -->
+									</div><!-- /.inner-container -->
+								</div><!-- /.member-container -->
+							</div><!-- /.member -->
+						</div>
+
+						<div class="col-md-6">
+							<div class="member wow bounceInUp animated">
+								<div class="member-container" data-wow-delay=".3s">
+									<div class="inner-container">
+										<div class="author-avatar">									
+											<img class="img-circle" src="img/team_pic2.jpg" alt="Team Menber">
+										</div><!-- /.author-avatar -->
+										<div class="member-details">
+											<div class="member-top">									
+												<h4 class="name">
+													Mark lores
+												</h4>
+												<span class="designation">
+													Web Developer
+												</span>
+											</div><!-- /.member-top -->
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.
+											</p>
+											<div class="member-social-link">
+												<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
+												<a href="#" class="facebook-btn"><i class="fa fa-facebook"></i></a>
+												<a href="#" class="dribbble-btn"><i class="fa fa-dribbble"></i></a>
+												<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
+											</div><!-- /.member-social-link -->
+										</div><!-- /.member-details -->
+									</div><!-- /.inner-container -->
+								</div><!-- /.member-container -->
+							</div><!-- /.member -->
+						</div>
+
+						<div class="col-md-6">
+							<div class="member wow bounceInUp animated" >
+								<div class="member-container" data-wow-delay=".5s">
+									<div class="inner-container">
+										<div class="author-avatar">									
+											<img class="img-circle" src="img/team_pic3.jpg" alt="Team Menber">
+										</div><!-- /.author-avatar -->
+										<div class="member-details">
+											<div class="member-top">									
+												<h4 class="name">
+													Thomas Lere
+												</h4>
+												<span class="designation">
+													UX Designer
+												</span>
+											</div><!-- /.member-top -->
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.
+											</p>
+											<div class="member-social-link">
+												<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
+												<a href="#" class="facebook-btn"><i class="fa fa-facebook"></i></a>
+												<a href="#" class="dribbble-btn"><i class="fa fa-dribbble"></i></a>
+												<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
+											</div><!-- /.member-social-link -->
+										</div><!-- /.member-details -->
+									</div><!-- /.inner-container -->
+								</div><!-- /.member-container -->
+							</div><!-- /.member -->
+						</div>
+
+						<div class="col-md-6">
+							<div class="member wow bounceInUp animated">
+								<div class="member-container" data-wow-delay=".7s">
+									<div class="inner-container">
+										<div class="author-avatar">									
+											<img class="img-circle" src="img/team_pic4.jpg" alt="Team Menber">
+										</div><!-- /.author-avatar -->
+										<div class="member-details">
+											<div class="member-top">									
+												<h4 class="name">
+													Grintel Mark
+												</h4>
+												<span class="designation">
+													Web Designer
+												</span>
+											</div><!-- /.member-top -->
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.
+											</p>
+											<div class="member-social-link">
+												<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
+												<a href="#" class="facebook-btn"><i class="fa fa-facebook"></i></a>
+												<a href="#" class="dribbble-btn"><i class="fa fa-dribbble"></i></a>
+												<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
+											</div><!-- /.member-social-link -->
+										</div><!-- /.member-details -->
+									</div><!-- /.inner-container -->
+								</div><!-- /.member-container -->
+							</div><!-- /.member -->
+						</div>
+					</div><!-- /.row -->
+				</div>
+				
+
+</div>
+</section>
+<!--/Team-->
+<!--Footer-->
+<footer class="footer_wrapper" id="contact">
+  <div class="container">
+    <section class="page_section contact" id="contact">
+      <div class="contact_section">
+        <h2>Contact Us</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            
+          </div>
+          <div class="col-lg-4">
+           
+          </div>
+          <div class="col-lg-4">
+          
+          </div>
+        </div>
+      </div>
+      <div class="row">
+ 
+        <div class="col-lg-12 wow fadeInLeft delay-06s">
+          <div class="form">
+            <input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+            <input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+            <textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
+            <input class="input-btn" type="submit" value="send message">
+          </div>
+        </div>
+		
+      </div>
+    </section>
+  </div>
+  <div class="container">
+    <div class="footer_bottom"><span>Copyright © 2014,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.nav.js"></script> 
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script> 
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
 </html>
