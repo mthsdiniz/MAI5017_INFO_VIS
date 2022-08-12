@@ -244,16 +244,16 @@ p {
 }
 
 .top_left_cont h2 {
-    font-size: 40px;
+    font-size: px;
     color: #FFF;
-    line-height: 52px;
+    line-height: 40px;
     margin: 0 0 26px 0;
     font-family: 'Raleway', sans-serif;
     text-align: left;
 }
 
 .top_left_cont h2 strong {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .top_left_cont p {
